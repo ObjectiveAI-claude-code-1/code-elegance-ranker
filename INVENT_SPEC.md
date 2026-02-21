@@ -1,0 +1,1 @@
+rank code snippets by elegance

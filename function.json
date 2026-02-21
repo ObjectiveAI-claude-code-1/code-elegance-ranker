@@ -1,0 +1,80 @@
+{
+  "type": "vector.function",
+  "input_schema": {
+    "type": "array",
+    "description": "An array of code snippets to be ranked by elegance",
+    "minItems": 2,
+    "items": {
+      "type": "string",
+      "description": "A code snippet to evaluate for simplicity and clarity"
+    }
+  },
+  "output_length": {
+    "$starlark": "len(input)"
+  },
+  "input_split": {
+    "$starlark": "[[snippet] for snippet in input]"
+  },
+  "input_merge": {
+    "$starlark": "[snippet[0] for snippet in input]"
+  },
+  "tasks": [
+    {
+      "type": "placeholder.vector.function",
+      "input_schema": {
+        "type": "array",
+        "description": "An array of code snippets to rank by simplicity",
+        "minItems": 2,
+        "items": {
+          "type": "string",
+          "description": "A code snippet to evaluate for simplicity"
+        }
+      },
+      "output_length": {
+        "$starlark": "len(input)"
+      },
+      "input_split": {
+        "$starlark": "[[snippet] for snippet in input]"
+      },
+      "input_merge": {
+        "$starlark": "[snippet[0] for snippet in input]"
+      },
+      "skip": null,
+      "input": {
+        "$starlark": "input"
+      },
+      "output": {
+        "$starlark": "output"
+      }
+    },
+    {
+      "type": "placeholder.vector.function",
+      "input_schema": {
+        "type": "array",
+        "description": "An array of code snippets to rank by clarity",
+        "minItems": 2,
+        "items": {
+          "type": "string",
+          "description": "A code snippet to evaluate for clarity"
+        }
+      },
+      "output_length": {
+        "$starlark": "len(input)"
+      },
+      "input_split": {
+        "$starlark": "[[snippet] for snippet in input]"
+      },
+      "input_merge": {
+        "$starlark": "[snippet[0] for snippet in input]"
+      },
+      "skip": null,
+      "input": {
+        "$starlark": "input"
+      },
+      "output": {
+        "$starlark": "output"
+      }
+    }
+  ],
+  "description": "The code-elegance-ranker evaluates and ranks multiple code snippets by elegance, balancing simplicity and clarity. It identifies which implementations are most graceful and maintainable, serving as a learning tool and decision-aid for code review, refactoring, and architecture discussions."
+}

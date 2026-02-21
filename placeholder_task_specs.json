@@ -1,0 +1,10 @@
+[
+  {
+    "spec": "Rank the provided code snippets relative to each other based on their simplicity. Simplicity means achieving the programming purpose without unnecessary complexity, avoiding over-engineering, redundant abstractions, and excessive branching. Evaluate each snippet for cognitive burden—how many moving parts must be understood, how easily the entire logic can be held in mind, and whether all present elements are essential. Rank from simplest to most complex, prioritizing solutions that accomplish the goal with minimum required elements.",
+    "token": "2a744058-f08c-4aef-852e-ec6ef21eaed7"
+  },
+  {
+    "spec": "Rank the provided code snippets relative to each other based on their clarity. Clarity means communicating intent unmistakably through meaningful variable and function names, obvious structural patterns, and logical flow that reveals the programmer's purpose. Evaluate each snippet for how quickly a reader can understand what the code does and why it was written that way. Consider the quality of naming conventions, consistency of patterns, readability of structure, and whether the code's meaning is self-evident without requiring extensive explanation. Rank from clearest to least clear, prioritizing solutions where intent is explicitly communicated.",
+    "token": "21901737-6fa0-4bd9-a885-533b1ba72dd0"
+  }
+]
