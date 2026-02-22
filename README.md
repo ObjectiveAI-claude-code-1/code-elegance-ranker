@@ -11,12 +11,12 @@ The function evaluates code elegance through two complementary dimensions:
 ### Simplicity
 Elegant code achieves its purpose without unnecessary layers, abstractions, or complexity. It evaluates whether code contains only essential elements, avoids over-engineering, and minimizes the cognitive burden required to understand it. Code that is simple is easier to maintain, extend, and debug.
 
-**Sub-function**: [{{ .Task0 }}](https://github.com/{{ .Owner }}/{{ .Task0 }})
+**Sub-function**: [rank-code-simplicity](https://github.com/ObjectiveAI-claude-code-1/rank-code-simplicity)
 
 ### Clarity
 Elegant code communicates intent unmistakably through thoughtful naming, consistent patterns, and obvious structure. It respects the reader by making assumptions explicit and showing the "why" behind decisions. Code that is clear requires minimal explanation and can be understood quickly by present and future maintainers.
 
-**Sub-function**: [{{ .Task1 }}](https://github.com/{{ .Owner }}/{{ .Task1 }})
+**Sub-function**: [rank-code-clarity](https://github.com/ObjectiveAI-claude-code-1/rank-code-clarity)
 
 These two qualities work in harmony. Simplicity without clarity becomes cryptic. Clarity without simplicity becomes verbose. True elegance navigates between these poles, achieving both simultaneously.
 
@@ -85,14 +85,14 @@ By establishing **simplicity** and **clarity** as the two foundational qualities
 
 ## What Gets Evaluated
 
-**Simplicity Assessment** (via [{{ .Task0 }}](https://github.com/{{ .Owner }}/{{ .Task0 }})):
+**Simplicity Assessment** (via [rank-code-simplicity](https://github.com/ObjectiveAI-claude-code-1/rank-code-simplicity)):
 - Number of moving parts and abstractions
 - Cognitive burden required to understand the logic
 - Presence of unnecessary complexity or over-engineering
 - Whether all present elements serve an essential purpose
 - How easily the entire logic can be held in mind
 
-**Clarity Assessment** (via [{{ .Task1 }}](https://github.com/{{ .Owner }}/{{ .Task1 }})):
+**Clarity Assessment** (via [rank-code-clarity](https://github.com/ObjectiveAI-claude-code-1/rank-code-clarity)):
 - Quality and meaningfulness of variable and function names
 - Consistency of patterns and conventions
 - Obviousness of structural flow and logic progression
@@ -113,10 +113,10 @@ The `code-elegance-ranker` can be integrated into:
 
 This function is powered by two specialized sub-functions:
 
-1. **Simplicity Evaluator**: [{{ .Task0 }}](https://github.com/{{ .Owner }}/{{ .Task0 }})
+1. **Simplicity Evaluator**: [rank-code-simplicity](https://github.com/ObjectiveAI-claude-code-1/rank-code-simplicity)
    - Ranks snippets by how simply they solve the problem
    
-2. **Clarity Evaluator**: [{{ .Task1 }}](https://github.com/{{ .Owner }}/{{ .Task1 }})
+2. **Clarity Evaluator**: [rank-code-clarity](https://github.com/ObjectiveAI-claude-code-1/rank-code-clarity)
    - Ranks snippets by how clearly they communicate intent
 
 Both sub-functions work together to produce the final elegance ranking, each contributing its assessment to the overall score.

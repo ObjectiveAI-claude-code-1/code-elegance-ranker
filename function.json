@@ -1,5 +1,40 @@
 {
   "type": "vector.function",
+  "tasks": [
+    {
+      "type": "vector.function",
+      "owner": "ObjectiveAI-claude-code-1",
+      "repository": "rank-code-simplicity",
+      "commit": "47d0c47980ee4af6eb0a19e8ca3624b7955cf149",
+      "skip": null,
+      "input": {
+        "$starlark": "input"
+      },
+      "output": {
+        "$starlark": "output"
+      }
+    },
+    {
+      "type": "vector.function",
+      "owner": "ObjectiveAI-claude-code-1",
+      "repository": "rank-code-clarity",
+      "commit": "edc1daf89b2e2fe858cdd45d667ef52e9559119a",
+      "skip": null,
+      "input": {
+        "$starlark": "input"
+      },
+      "output": {
+        "$starlark": "output"
+      }
+    }
+  ],
+  "input_split": {
+    "$starlark": "[[snippet] for snippet in input]"
+  },
+  "input_merge": {
+    "$starlark": "[snippet[0] for snippet in input]"
+  },
+  "description": "The code-elegance-ranker evaluates and ranks multiple code snippets by elegance, balancing simplicity and clarity. It identifies which implementations are most graceful and maintainable, serving as a learning tool and decision-aid for code review, refactoring, and architecture discussions.",
   "input_schema": {
     "type": "array",
     "description": "An array of code snippets to be ranked by elegance",
@@ -11,70 +46,5 @@
   },
   "output_length": {
     "$starlark": "len(input)"
-  },
-  "input_split": {
-    "$starlark": "[[snippet] for snippet in input]"
-  },
-  "input_merge": {
-    "$starlark": "[snippet[0] for snippet in input]"
-  },
-  "tasks": [
-    {
-      "type": "placeholder.vector.function",
-      "input_schema": {
-        "type": "array",
-        "description": "An array of code snippets to rank by simplicity",
-        "minItems": 2,
-        "items": {
-          "type": "string",
-          "description": "A code snippet to evaluate for simplicity"
-        }
-      },
-      "output_length": {
-        "$starlark": "len(input)"
-      },
-      "input_split": {
-        "$starlark": "[[snippet] for snippet in input]"
-      },
-      "input_merge": {
-        "$starlark": "[snippet[0] for snippet in input]"
-      },
-      "skip": null,
-      "input": {
-        "$starlark": "input"
-      },
-      "output": {
-        "$starlark": "output"
-      }
-    },
-    {
-      "type": "placeholder.vector.function",
-      "input_schema": {
-        "type": "array",
-        "description": "An array of code snippets to rank by clarity",
-        "minItems": 2,
-        "items": {
-          "type": "string",
-          "description": "A code snippet to evaluate for clarity"
-        }
-      },
-      "output_length": {
-        "$starlark": "len(input)"
-      },
-      "input_split": {
-        "$starlark": "[[snippet] for snippet in input]"
-      },
-      "input_merge": {
-        "$starlark": "[snippet[0] for snippet in input]"
-      },
-      "skip": null,
-      "input": {
-        "$starlark": "input"
-      },
-      "output": {
-        "$starlark": "output"
-      }
-    }
-  ],
-  "description": "The code-elegance-ranker evaluates and ranks multiple code snippets by elegance, balancing simplicity and clarity. It identifies which implementations are most graceful and maintainable, serving as a learning tool and decision-aid for code review, refactoring, and architecture discussions."
+  }
 }
